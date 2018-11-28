@@ -1,0 +1,12 @@
+version: "3"
+services:
+   db:
+     image: sebp/elk
+     volumes:
+       - ./data:/var/lib/elasticsearch
+     restart: always
+     ports:
+       - "5044:5044"
+       - "5601:5601" 
+       - "9200:9200"
+       - "9300:9300"
